@@ -26,11 +26,9 @@
 			<key>filename</key>
 			<string>Rakefile</string>
 			<key>lastUsed</key>
-			<date>2009-06-18T03:46:17Z</date>
+			<date>2009-06-29T07:02:53Z</date>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>src</string>
 			<key>regexFolderFilter</key>
@@ -62,14 +60,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>33</integer>
+				<integer>2</integer>
 				<key>line</key>
-				<integer>23</integer>
+				<integer>36</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -83,7 +81,7 @@
 			<key>enabled</key>
 			<true/>
 			<key>value</key>
-			<string>TouchOSCing</string>
+			<string>RakeP5Demo</string>
 			<key>variable</key>
 			<string>P5_MAIN_CLASS</string>
 		</dict>
@@ -91,6 +89,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{159, 58}, {982, 820}}</string>
+	<string>{{187, 58}, {982, 820}}</string>
 </dict>
 </plist>

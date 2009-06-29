@@ -3,6 +3,8 @@ P5_MAIN_CLASS = "RakeP5Demo"
 MIN_MEMORY_MB = "64m"
 MAX_MEMORY_MB = "512m"
 
+SOURCE_PATHS = ['src']
+
 
 require 'rake'
 
@@ -18,7 +20,10 @@ task :build, [:main_class] do |t, args|
 	Dir.mkdir("bin") unless File.exists?("bin")
 	Dir.mkdir("bin/classes") unless File.exists?("bin/classes")
 	
-	system "javac -sourcepath src -cp \"#{library_classpath}\" -d bin/classes src/#{args.main_class}.java"
+	main_class_path = File.join(args.main_class.split('.'))
+	src_paths = SOURCE_PATHS.join(':')
+	
+	system "javac -sourcepath \"#{src_paths}\" -cp \"#{library_classpath}\" -d bin/classes #{SOURCE_PATHS[0]}/#{main_class_path}.java"
 	
 	puts "## Built sketch in #{Time.now.to_f - start_secs} seconds."
 	
@@ -53,7 +58,7 @@ def run_sketch(main_class)
 	# 	java_args += " --present --exclusive --hide-stop"
 	# end
 	
-	system "java -Xms#{MIN_MEMORY_MB} -Xmx#{MAX_MEMORY_MB} -cp \"#{library_classpath}:bin/classes\" -Djava.library.path=\"#{library_jnipath}\" processing.core.PApplet #{java_args}"
+	system "java -Xms#{MIN_MEMORY_MB} -Xmx#{MAX_MEMORY_MB} -cp \"#{library_classpath}:bin/classes\" -Djava.library.path=\"#{library_jnipath}\" #{main_class} #{java_args}"
 	
 	# Hmm running from Jar isn't working yet..
 	# sh "java -cp \"#{class_path}\" -jar bin/#{MAIN_CLASS}.jar #{MAIN_CLASS}"
