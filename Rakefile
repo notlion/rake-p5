@@ -4,6 +4,7 @@ MIN_MEMORY_MB = "64m"
 MAX_MEMORY_MB = "512m"
 
 SOURCE_PATHS = ['src']
+LIBRARY_PATH = 'library'
 
 
 require 'rake'
@@ -66,7 +67,7 @@ end
 
 
 def library_classpath()
-	cp_jars = Dir.glob(File.join('library', '*.jar')) # catch free floating jars
+	cp_jars = Dir.glob(File.join(LIBRARY_PATH, '*.jar')) # catch free floating jars
 	
 	library_dirs.each do |dir|
 		# eventually work this in
@@ -93,5 +94,5 @@ def library_jnipath()
 end
 
 def library_dirs()
-	return Dir.glob(File.join('library', '**', 'library'))
+	return Dir.glob(File.join(LIBRARY_PATH, '**', 'library'))
 end
