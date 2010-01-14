@@ -16,12 +16,12 @@ LIBRARY_PATH = 'library'
     
 install rake
 
->$ sudo gem install rake
+$ sudo gem install rake
 
 then
 
->$ rake run
+$ rake run
 
 or
 
->$ rake build
+$ rake build
