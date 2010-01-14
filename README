@@ -1,13 +1,33 @@
-TO USE (OSX)
 
-install rake
+(OSX)
 
-$ sudo gem install rake
+--- EDIT RakeFile :
 
-then
+    update 'P5_MAIN_CLASS' to your application class name
+    
+    P5_MAIN_CLASS = "package.ClassName"
 
-$ rake run
 
-or
+    set your source paths
 
-$rake build
+    SOURCE_PATHS = ['src', 'and', 'any', 'other', 'source', 'folders']
+
+
+    set your library path
+
+    LIBRARY_PATH = 'library'
+
+
+--- TO USE :
+    
+    install rake
+
+    $ sudo gem install rake
+
+    then
+
+    $ rake run
+
+    or
+
+    $ rake build
