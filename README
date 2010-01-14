@@ -1,0 +1,13 @@
+TO USE (OSX)
+
+install rake
+
+$ sudo gem install rake
+
+then
+
+$ rake run
+
+or
+
+$rake build
